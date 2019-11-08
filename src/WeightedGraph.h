@@ -136,22 +136,30 @@ namespace csi281 {
             auto visit = [&](V v) {
                 // Michelle Nie
 				visited.insert(v); // mark vertex as visited
-				for (auto& e : adjacencyList[v]) {
+				for (auto& e : neighborsWithWeights(v)) {
 					// add all edges to frontier (do not add edges already visited)
-					if (visited.find(e) != visited.empty()) {
+					if (visited.find(e.to) == visited.end())
 						frontier.push(e);
-					}
 				}
             };
             
             // Michelle Nie
-			visit(start);
+			visit(start); // begin at start vertex
 
 			while (!frontier.empty())
 			{
+				// continue exploring while there are still items in the priority queue
+				WeightedEdge edge = frontier.top();
+				frontier.pop();
+				if (visited.count(edge.to) > 0)
+					continue; // do not revisit edges already visited
 
+				// this is the current smallest, so add it to the solution
+				solution.push_back(edge);
+				visit(edge.to); // continue visiting adjacent edges
 			}
             
+			// return edges in the minimum spanning tree
             return solution;
         }
 
