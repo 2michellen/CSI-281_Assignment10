@@ -6,6 +6,7 @@
 //  You should not add any additional methods to this class.
 //
 //  Copyright 2019 David Kopec
+//	Modified by Michelle Nie
 //
 //  Permission is hereby granted, free of charge, to any person
 //  obtaining a copy of this software and associated documentation files
@@ -25,6 +26,8 @@
 //  OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 //  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 //  OTHER DEALINGS IN THE SOFTWARE.
+
+//	Michelle Nie
 
 #ifndef weighted_graph_hpp
 #define weighted_graph_hpp
@@ -131,10 +134,23 @@ namespace csi281 {
             // that can be called by calling visit(yourVertexGoesHere)
             // this aligns with the inner function visit() from the pseudo code in the slides
             auto visit = [&](V v) {
-                // YOUR CODE HERE
+                // Michelle Nie
+				visited.insert(v); // mark vertex as visited
+				for (auto& e : adjacencyList[v]) {
+					// add all edges to frontier (do not add edges already visited)
+					if (visited.find(e) != visited.empty()) {
+						frontier.push(e);
+					}
+				}
             };
             
-            // YOUR CODE HERE
+            // Michelle Nie
+			visit(start);
+
+			while (!frontier.empty())
+			{
+
+			}
             
             return solution;
         }
