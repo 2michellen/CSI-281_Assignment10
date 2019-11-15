@@ -7,8 +7,8 @@ Michelle Nie
 3. Adjacency Matrix for Chicago, Detroit, Boston, New York, Philadelphia
 Google Sheet: https://docs.google.com/spreadsheets/d/1zdP7VNbHtWcc3x6KU8lyT1YSy82wao-d7yak0xK4VNg/edit?usp=sharing
 
-4. What is the Big-O time complexity of Jarnik's algorithm when a priority queue (binary heap) is used? What about when it is not used? Why is there a difference?
+4. Jarnik's algorithm has a time complexity of O((|V| + |E|) log|V|) with a priority queue and O(|V^2|) without a priority queue. The extra time without a priority queue requires linearly searching through the list to find the minimum weighted edge each time. (Source: https://en.wikipedia.org/wiki/Prim%27s_algorithm#Time_complexity)
 
-5. Why is Jarnik's algorithm a greedy algorithm?
+5. Jarnik's algorithm is a greedy algorithm because it chooses the locally optimal choice at each step - it runs for immediate benefit at each step (and working with MST's) to produce the optimal solution for the whole problem.
 
-6. Jarnik's algorithm is commonly known as Prim's algorithm, even though Jarnik discovered it and published it decades before Prim rediscovered it. Research another algorithm that has a different common name from its original discoverer. What is the purpose of the algorithm and why did its original creator not get credit?
+6. Gaussian elimination, or Gauss-Jordan elimination, was credited to Carl Friedrich Gauss (1777-1855), but was originally documented by Chinese mathematicians in around 179 AD. The purpose of the algorithm is to use elementary row operations to transform a matrix into upper triangular form (or reduced row echelon form). The original "creators" did not get credit likely because of linguistic and geographic barriers, as many mathematical concepts emerged independently from the west that are equivalent to Western mathematics.
