@@ -1,11 +1,11 @@
 Michelle Nie
 
-1. How can Jarnik's algorithm be re-configured to find the maximum-spanning-tree instead of the minimum-spanning-tree?
-If you negate the weights of each edge in the frontier and run the algorithm, it will give you a maximum spanning tree. (Source: http://mathworld.wolfram.com/MaximumSpanningTree.html)
+1. If you negate the weights of each edge in the frontier and run the algorithm, it will give you a maximum spanning tree. (Source: http://mathworld.wolfram.com/MaximumSpanningTree.html)
 
-2. How is a minimum-spanning-tree different from a solution to The Traveling Salesman problem?
+2. Minimum-spanning-tree does not take into account direction like the Traveling Salesman problem requires. In both, the minimum distance is required, but the Traveling Salesman problem also requires returning to the starting point. (Source: https://www.quora.com/What-is-the-difference-between-Travelling-Salesman-Problem-and-Minimum-Spanning-Tree-problem)
 
-3. Rewrite 5 vertices from the weighted graph cityGraph2 from test.cpp in adjacency matrix form. You can enter a text table yourself in your answers file, or copy and paste a text table from https://www.tablesgenerator.com/text_tables or add an additional image/spreadsheet file to your repository or put a link in question 3 to a Google Sheet. It's your call.
+3. Adjacency Matrix for Chicago, Detroit, Boston, New York, Philadelphia
+Google Sheet: https://docs.google.com/spreadsheets/d/1zdP7VNbHtWcc3x6KU8lyT1YSy82wao-d7yak0xK4VNg/edit?usp=sharing
 
 4. What is the Big-O time complexity of Jarnik's algorithm when a priority queue (binary heap) is used? What about when it is not used? Why is there a difference?
 
